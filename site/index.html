@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#090e19">
+<meta name="theme-color" content="#f7f9fd">
 <meta name="description" content="一眼查看 Google Antigravity App 最新版本与官方中文界面支持状态">
 <title>Antigravity 中文支持状态</title>
 <style>
 :root {
-  color-scheme: dark;
+  color-scheme: light;
   font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-  color: #f0f4ff;
-  background: #090e19;
+  color: #1c2b45;
+  background: #f7f9fd;
   font-synthesis: none;
 }
 * { box-sizing: border-box; }
@@ -20,9 +20,9 @@ body {
   min-height: 100vh;
   min-height: 100svh;
   background:
-    radial-gradient(ellipse 66% 56% at 50% 13%, #18335b70, transparent 75%),
-    radial-gradient(ellipse 45% 38% at 92% 90%, #14244355, transparent 80%),
-    #090e19;
+    radial-gradient(ellipse 60% 48% at 84% 6%, #dce9ffb8, transparent 78%),
+    radial-gradient(ellipse 50% 35% at 7% 90%, #fff0e3a8, transparent 78%),
+    linear-gradient(180deg, #fafcff 0%, #f5f7fb 100%);
 }
 a { color: inherit; }
 .page {
@@ -42,7 +42,7 @@ a { color: inherit; }
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  color: #ecf2ff;
+  color: #1e2e4a;
   text-decoration: none;
   font-size: 17px;
   font-weight: 740;
@@ -53,14 +53,14 @@ a { color: inherit; }
   height: 34px;
   display: grid;
   place-items: center;
-  border: 1px solid #5c7bc080;
+  border: 1px solid #6488d0;
   border-radius: 10px;
-  background: linear-gradient(145deg, #294a86, #15223b);
-  color: #c4d6ff;
-  box-shadow: 0 5px 20px #0c1d3c77;
+  background: linear-gradient(145deg, #5d87d8, #315db8);
+  color: #ffffff;
+  box-shadow: 0 5px 20px #4e7dcb36;
 }
 .brand-sub {
-  color: #8ca0c3;
+  color: #72829f;
   font-weight: 510;
 }
 main {
@@ -75,7 +75,7 @@ main {
 }
 h1 {
   margin: 0;
-  color: #c5d2e9;
+  color: #4a5d7b;
   font-size: clamp(22px, 3vw, 32px);
   line-height: 1.4;
   letter-spacing: -.04em;
@@ -91,28 +91,28 @@ h1 {
   transition: color .2s ease;
 }
 .status[data-state="unsupported"] {
-  color: #ffcf9b;
-  text-shadow: 0 0 65px #d88f3b1a;
+  color: #c75c44;
+  text-shadow: 0 12px 46px #eaa89338;
 }
 .status[data-state="supported"] {
-  color: #9eeacb;
-  text-shadow: 0 0 65px #39c78d24;
+  color: #138567;
+  text-shadow: 0 12px 46px #84d2ad38;
 }
 .status[data-state="unknown"] {
-  color: #bdd0f3;
+  color: #5977a8;
 }
 .status[data-state="loading"] {
-  color: #879bbd;
+  color: #9ca9bd;
   font-size: clamp(45px, 8vw, 72px);
   min-height: 1.74em;
 }
 .metrics {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border: 1px solid #2b3850;
-  border-radius: 18px;
-  background: linear-gradient(145deg, #19253aaf, #101a2aaf);
-  box-shadow: 0 12px 45px #00000018;
+  border: 1px solid #e0e7f1;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #ffffff, #f9fbff);
+  box-shadow: 0 18px 45px #38557a12, 0 2px 8px #38557a09;
   overflow: hidden;
 }
 .metric {
@@ -120,16 +120,16 @@ h1 {
   min-width: 0;
 }
 .metric + .metric {
-  border-left: 1px solid #2b3850;
+  border-left: 1px solid #e4e9f1;
 }
 .metric-label {
-  color: #8fa5c7;
+  color: #7585a0;
   font-size: 13px;
   font-weight: 560;
   margin-bottom: 9px;
 }
 .metric-value {
-  color: #edf4ff;
+  color: #1b2c47;
   font-weight: 760;
   letter-spacing: -.035em;
   font-size: clamp(23px, 3.5vw, 32px);
@@ -140,7 +140,7 @@ h1 {
   font-size: clamp(20px, 3vw, 27px);
 }
 .time-block { margin-top: 37px; }
-.time-label { color: #8599bc; font-size: 13px; margin-bottom: 11px; }
+.time-label { color: #7787a0; font-size: 13px; margin-bottom: 11px; }
 .time-value {
   display: flex;
   gap: 16px;
@@ -149,25 +149,25 @@ h1 {
   flex-wrap: wrap;
   font-variant-numeric: tabular-nums;
 }
-.today { color: #bac9e1; font-size: 19px; letter-spacing: -.015em; }
-.clock { color: #edf4ff; font-size: clamp(26px, 5vw, 38px); font-weight: 680; letter-spacing: -.035em; }
+.today { color: #657690; font-size: 19px; letter-spacing: -.015em; }
+.clock { color: #20314c; font-size: clamp(26px, 5vw, 38px); font-weight: 680; letter-spacing: -.035em; }
 .notice {
   width: fit-content;
   max-width: 100%;
   margin: 25px auto 0;
   padding: 10px 14px;
-  border: 1px solid #86693f;
+  border: 1px solid #efd5aa;
   border-radius: 9px;
-  background: #4e391b35;
-  color: #f4ce92;
+  background: #fff6e8;
+  color: #9a5d24;
   font-size: 13px;
   line-height: 1.6;
 }
 [hidden] { display: none !important; }
 footer {
-  border-top: 1px solid #26344b;
+  border-top: 1px solid #e0e6f0;
   padding: 21px 0 25px;
-  color: #7f92b2;
+  color: #72819a;
   font-size: 12px;
   line-height: 1.7;
   display: flex;
@@ -178,13 +178,13 @@ footer {
   text-align: center;
 }
 footer a {
-  color: #a2b9df;
+  color: #3f69ad;
   text-decoration: underline;
-  text-decoration-color: #5b7097;
+  text-decoration-color: #b6c6df;
   text-underline-offset: 3px;
 }
-footer a:hover, footer a:focus-visible { color: #ecf3ff; }
-footer .dot { margin: 0 7px; color: #667b9e; }
+footer a:hover, footer a:focus-visible { color: #19468d; }
+footer .dot { margin: 0 7px; color: #9baac0; }
 @media (max-width: 560px) {
   .page { width: min(100% - 32px, 1100px); }
   .topbar { min-height: 72px; }
@@ -201,7 +201,7 @@ footer .dot { margin: 0 7px; color: #667b9e; }
 }
 @media (max-width: 350px) {
   .metrics { grid-template-columns: 1fr; }
-  .metric + .metric { border-left: 0; border-top: 1px solid #2b3850; }
+  .metric + .metric { border-left: 0; border-top: 1px solid #e4e9f1; }
   .metric { padding: 15px; }
   .status { font-size: 60px; }
 }
@@ -307,7 +307,7 @@ footer .dot { margin: 0 7px; color: #667b9e; }
       return response.json();
     })
     .then(function (data) {
-      var labels = { supported: '已支持', unsupported: '暂不支持', unknown: '待核实' };
+      var labels = { supported: '支持', unsupported: '不支持', unknown: '待核实' };
       state = Object.prototype.hasOwnProperty.call(labels, data.chinese_ui)
         ? data.chinese_ui : 'unknown';
       node('language').textContent = labels[state];
