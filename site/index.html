@@ -56,7 +56,10 @@ var node=function(id){return document.getElementById(id)};
 var fmt=new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false});
 function tick(){node('clock').textContent=fmt.format(new Date()).replaceAll('/','-')}tick();setInterval(tick,1000);
 fetch('./status.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw Error('Failed');return r.json()}).then(function(d){
-node('version').textContent='v'+d.version.replace(/^v/,'');node('release').textContent=d.release_date||'待核实';node('checked').textContent=(d.verified_at||'待核实').slice(0,10);node('summary').textContent=d.summary;
+node('version').textContent='v'+d.version.replace(/^v/,'');node('release').textContent=d.release_date||'待核实';
+var checkedDate=d.verified_at?new Date(d.verified_at):null;
+node('checked').textContent=checkedDate&&!isNaN(checkedDate.valueOf())?fmt.format(checkedDate).replaceAll('/','-').slice(0,10):'待核实';
+node('summary').textContent=d.summary;
 node('language').textContent={supported:'已支持',unsupported:'暂不支持',unknown:'待核实'}[d.chinese_ui]||'待核实';
 node('language').style.color=d.chinese_ui==='supported'?'#87efaf':d.chinese_ui==='unsupported'?'#8de4c5':'#f2c98d';
 if(d.version_source&&d.version_source.startsWith('https://'))node('version-link').href=d.version_source;
