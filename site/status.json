@@ -1,0 +1,9 @@
+{
+  "version": "2.33.0",
+  "release_date": "2026-11-17",
+  "chinese_ui": "unsupported",
+  "verified_at": "2026-11-19T01:33:21.616Z",
+  "summary": "本次自动检查未发现 Google 发布官方简体中文界面的证据；当前仍记录为暂不支持。中文对话、IDE 语言包和第三方汉化不计入。",
+  "version_source": "https://antigravity.google/docs/changelog",
+  "language_source": "https://discuss.ai.google.dev/t/official-i18n-support-for-antigravity-gui-externalized-strings-and-a-community-translation-pipeline/199401"
+}
