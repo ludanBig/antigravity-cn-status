@@ -57,22 +57,23 @@ const settingsText = plainText(settingsMain);
 const hasOfficialChineseUI = officialChineseInterfaceMentioned(latestText) ||
   officialChineseInterfaceMentioned(settingsText);
 
-let chinese_ui;
+let chinese_ui = previous.chinese_ui;
 let summary;
 let language_source = previous.language_source;
+
 if (hasOfficialChineseUI) {
-  chinese_ui = "supported";
-  summary = "Google 官方更新日志或设置文档已出现简体中文界面支持说明；请通过来源核对适用版本及具体范围。";
-  language_source = officialChineseInterfaceMentioned(settingsText) ? settingsUrl : changelogUrl;
-} else if (previous.version !== version) {
+  // A keyword match is a reason to review the evidence, not proof of a released UI.
   chinese_ui = "unknown";
-  summary = "检测到新的 Antigravity App 版本，尚缺少足够的官方证据确认简体中文界面是否上线，等待进一步核实。";
-  language_source = settingsUrl;
+  summary = "Google 官方资料出现可能涉及简体中文界面的描述，需要进一步核实是否适用于独立桌面 App。";
+  language_source = officialChineseInterfaceMentioned(latestText) ? changelogUrl : settingsUrl;
+} else if (chinese_ui === "unsupported") {
+  // A new App version alone does not change the last verified language status.
+  summary = "本次自动检查未发现 Google 已推出独立桌面 App 官方简体中文界面的公告，继续沿用此前核验的「不支持」状态。";
+} else if (chinese_ui === "supported") {
+  summary = "本次检查未发现官方中文界面支持被取消的公告，继续沿用此前已核实的「支持」状态。";
 } else {
-  chinese_ui = previous.chinese_ui;
-  summary = chinese_ui === "unsupported"
-    ? "本次自动检查未发现 Google 发布官方简体中文界面的证据；当前仍记录为暂不支持。中文对话、IDE 语言包和第三方汉化不计入。"
-    : previous.summary;
+  chinese_ui = "unknown";
+  summary = "目前缺少足够证据确认独立桌面 App 的官方中文界面支持情况，需要进一步核实。";
 }
 
 const next = {
