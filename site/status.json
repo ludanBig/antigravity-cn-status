@@ -1,9 +1,9 @@
 {
-  "version": "2.34.0",
-  "release_date": "2026-11-20",
+  "version": "2.35.0",
+  "release_date": "2026-11-23",
   "chinese_ui": "unsupported",
-  "verified_at": "2026-11-22T15:57:47.740Z",
-  "summary": "2026-11-22（北京时间）核验 Google Antigravity 独立桌面 App：官方 Changelog 的 Antigravity App 分栏显示最新正式版本为 v2.34.0，发布日期 2026-11-20。该版本新增 MCP Apps、Gemini 4 Neon 等，并修复中文及日文文字流式显示效果，但未宣布提供简体中文界面或官方界面语言切换。已核查 Google 官方更新日志、设置相关文档和 Google AI 开发者论坛：未找到官方简体中文 UI 已推出的可验证证据；2026-11-10 的论坛用户功能请求反映当时独立 App 缺少界面语言选项，该帖子并非 Google 的正式声明。维持 unsupported。中文 AI 对话、IDE 语言包和第三方汉化不计入官方中文 UI。",
+  "verified_at": "2026-11-24T02:50:52.032Z",
+  "summary": "本次自动检查未发现 Google 已推出独立桌面 App 官方简体中文界面的公告，继续沿用此前核验的「不支持」状态。",
   "version_source": "https://antigravity.google/docs/changelog",
   "language_source": "https://discuss.ai.google.dev/t/official-i18n-support-for-antigravity-gui-externalized-strings-and-a-community-translation-pipeline/199401"
 }
