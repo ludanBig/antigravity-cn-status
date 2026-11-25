@@ -1,8 +1,8 @@
 {
-  "version": "2.35.0",
-  "release_date": "2026-11-23",
+  "version": "2.35.1",
+  "release_date": "2026-11-24",
   "chinese_ui": "unsupported",
-  "verified_at": "2026-11-24T06:13:46.770Z",
+  "verified_at": "2026-11-25T00:32:04.819Z",
   "summary": "本次自动检查未发现 Google 已推出独立桌面 App 官方简体中文界面的公告，继续沿用此前核验的「不支持」状态。",
   "version_source": "https://antigravity.google/docs/changelog",
   "language_source": "https://discuss.ai.google.dev/t/official-i18n-support-for-antigravity-gui-externalized-strings-and-a-community-translation-pipeline/199401"
